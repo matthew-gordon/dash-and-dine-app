@@ -12,6 +12,8 @@
 		4664E22A1E69164B00811D66 /* CustomerMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4664E2291E69164B00811D66 /* CustomerMenuTableViewController.swift */; };
 		4664E22C1E69208200811D66 /* MealListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4664E22B1E69208200811D66 /* MealListTableViewController.swift */; };
 		4664E22E1E6931AD00811D66 /* MealDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4664E22D1E6931AD00811D66 /* MealDetailsViewController.swift */; };
+		4664E2301E693F4700811D66 /* TrayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4664E22F1E693F4700811D66 /* TrayViewController.swift */; };
+		4664E2331E69405B00811D66 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4664E2321E69405B00811D66 /* MapKit.framework */; };
 		46865AA81E68C131003FCF97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46865AA71E68C131003FCF97 /* AppDelegate.swift */; };
 		46865AAA1E68C131003FCF97 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46865AA91E68C131003FCF97 /* ViewController.swift */; };
 		46865AAD1E68C131003FCF97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46865AAB1E68C131003FCF97 /* Main.storyboard */; };
@@ -27,6 +29,8 @@
 		4664E2291E69164B00811D66 /* CustomerMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerMenuTableViewController.swift; sourceTree = "<group>"; };
 		4664E22B1E69208200811D66 /* MealListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealListTableViewController.swift; sourceTree = "<group>"; };
 		4664E22D1E6931AD00811D66 /* MealDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealDetailsViewController.swift; sourceTree = "<group>"; };
+		4664E22F1E693F4700811D66 /* TrayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrayViewController.swift; sourceTree = "<group>"; };
+		4664E2321E69405B00811D66 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		46865AA41E68C131003FCF97 /* dash-and-dine-mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "dash-and-dine-mobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		46865AA71E68C131003FCF97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		46865AA91E68C131003FCF97 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -41,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4664E2331E69405B00811D66 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,11 +62,20 @@
 			name = Lib;
 			sourceTree = "<group>";
 		};
+		4664E2311E69405B00811D66 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4664E2321E69405B00811D66 /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		46865A9B1E68C130003FCF97 = {
 			isa = PBXGroup;
 			children = (
 				46865AA61E68C131003FCF97 /* dash-and-dine-mobile */,
 				46865AA51E68C131003FCF97 /* Products */,
+				4664E2311E69405B00811D66 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -87,6 +101,7 @@
 				4664E2291E69164B00811D66 /* CustomerMenuTableViewController.swift */,
 				4664E22B1E69208200811D66 /* MealListTableViewController.swift */,
 				4664E22D1E6931AD00811D66 /* MealDetailsViewController.swift */,
+				4664E22F1E693F4700811D66 /* TrayViewController.swift */,
 			);
 			path = "dash-and-dine-mobile";
 			sourceTree = "<group>";
@@ -166,6 +181,7 @@
 			files = (
 				46865AAA1E68C131003FCF97 /* ViewController.swift in Sources */,
 				4664E22E1E6931AD00811D66 /* MealDetailsViewController.swift in Sources */,
+				4664E2301E693F4700811D66 /* TrayViewController.swift in Sources */,
 				4664E2281E6907B700811D66 /* RestaurantViewController.swift in Sources */,
 				4664E22C1E69208200811D66 /* MealListTableViewController.swift in Sources */,
 				46865AA81E68C131003FCF97 /* AppDelegate.swift in Sources */,

@@ -1,5 +1,5 @@
 //
-//  RestaurantViewController.swift
+//  TrayViewController.swift
 //  dash-and-dine-mobile
 //
 //  Created by Matt Gordon on 3/2/17.
@@ -8,13 +8,13 @@
 
 import UIKit
 
-class RestaurantViewController: UIViewController {
+class TrayViewController: UIViewController {
 
     @IBOutlet weak var menuBarButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         if self.revealViewController() != nil {
             menuBarButton.target = self.revealViewController()
             menuBarButton.action = #selector(SWRevealViewController.revealToggle(_:))
@@ -23,7 +23,7 @@ class RestaurantViewController: UIViewController {
     }
 }
 
-extension RestaurantViewController: UITableViewDelegate, UITableViewDataSource {
+extension TrayViewController: UITableViewDataSource, UITableViewDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -34,9 +34,8 @@ extension RestaurantViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "RestaurantCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TrayItemCell", for: indexPath)
         
         return cell
     }
-    
 }
