@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		46274C7E1E69D77E0062FBCB /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46274C7D1E69D77E0062FBCB /* PaymentViewController.swift */; };
 		4664E2231E68EF8600811D66 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4664E2221E68EF8600811D66 /* SWRevealViewController.m */; };
 		4664E2281E6907B700811D66 /* RestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4664E2271E6907B700811D66 /* RestaurantViewController.swift */; };
 		4664E22A1E69164B00811D66 /* CustomerMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4664E2291E69164B00811D66 /* CustomerMenuTableViewController.swift */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		19033CC68B110FBF390354FB /* Pods_dash_and_dine_mobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dash_and_dine_mobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		46274C7D1E69D77E0062FBCB /* PaymentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
 		4664E2201E68EF8500811D66 /* dash-and-dine-mobile-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "dash-and-dine-mobile-Bridging-Header.h"; sourceTree = "<group>"; };
 		4664E2211E68EF8600811D66 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		4664E2221E68EF8600811D66 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				4664E22B1E69208200811D66 /* MealListTableViewController.swift */,
 				4664E22D1E6931AD00811D66 /* MealDetailsViewController.swift */,
 				4664E22F1E693F4700811D66 /* TrayViewController.swift */,
+				46274C7D1E69D77E0062FBCB /* PaymentViewController.swift */,
 			);
 			path = "dash-and-dine-mobile";
 			sourceTree = "<group>";
@@ -253,6 +256,7 @@
 				4664E22C1E69208200811D66 /* MealListTableViewController.swift in Sources */,
 				46865AA81E68C131003FCF97 /* AppDelegate.swift in Sources */,
 				4664E22A1E69164B00811D66 /* CustomerMenuTableViewController.swift in Sources */,
+				46274C7E1E69D77E0062FBCB /* PaymentViewController.swift in Sources */,
 				4664E2231E68EF8600811D66 /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

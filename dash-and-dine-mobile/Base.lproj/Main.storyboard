@@ -429,7 +429,7 @@
                                 <rect key="frame" x="0.0" y="72" width="414" height="140"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QoX-vT-Yr9" id="H7S-zw-VXU">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="139"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="140"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blank_image" translatesAutoresizingMaskIntoConstraints="NO" id="CIR-nc-Vgc">
@@ -755,6 +755,9 @@
                                 <state key="normal" title="ADD PAYMENT">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="lBV-9O-WcB" kind="show" id="OY0-na-H5o"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xiV-ej-dcQ">
                                 <rect key="frame" x="5" y="389" width="404" height="287"/>
@@ -788,6 +791,55 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dvV-za-pPC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3102.898550724638" y="2360.8695652173915"/>
+        </scene>
+        <!--Payment View Controller-->
+        <scene sceneID="dRB-IF-tJR">
+            <objects>
+                <viewController id="lBV-9O-WcB" customClass="PaymentViewController" customModule="dash_and_dine_mobile" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ziG-AK-qO7"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ai4-PO-jfI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kq9-NQ-nq9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lL2-mL-nuz" customClass="STPPaymentCardTextField">
+                                <rect key="frame" x="57" y="84" width="300" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="Tx6-Te-blw"/>
+                                    <constraint firstAttribute="height" constant="50" id="vbz-IQ-geh"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OwP-E8-ejC">
+                                <rect key="frame" x="8" y="678" width="398" height="50"/>
+                                <color key="backgroundColor" red="0.035294117649999998" green="0.5450980392" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="3T3-h0-9jt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <state key="normal" title="PLACE ORDER">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lL2-mL-nuz" firstAttribute="centerX" secondItem="kq9-NQ-nq9" secondAttribute="centerX" id="5xU-Pm-fzQ"/>
+                            <constraint firstItem="Ai4-PO-jfI" firstAttribute="top" secondItem="OwP-E8-ejC" secondAttribute="bottom" constant="8" id="TyX-vj-cSd"/>
+                            <constraint firstItem="OwP-E8-ejC" firstAttribute="leading" secondItem="kq9-NQ-nq9" secondAttribute="leading" constant="8" id="gDh-o0-KTt"/>
+                            <constraint firstAttribute="trailing" secondItem="OwP-E8-ejC" secondAttribute="trailing" constant="8" id="i9F-48-rQK"/>
+                            <constraint firstItem="lL2-mL-nuz" firstAttribute="top" secondItem="ziG-AK-qO7" secondAttribute="bottom" constant="20" id="yMA-IY-lLt"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cardTextField" destination="lL2-mL-nuz" id="asm-3c-T4P"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zVW-qs-FWs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3874" y="2361"/>
         </scene>
         <!--Reveal View Controller-->
         <scene sceneID="bmy-px-33y">
