@@ -19,9 +19,11 @@
 		46865AAD1E68C131003FCF97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46865AAB1E68C131003FCF97 /* Main.storyboard */; };
 		46865AAF1E68C131003FCF97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46865AAE1E68C131003FCF97 /* Assets.xcassets */; };
 		46865AB21E68C131003FCF97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46865AB01E68C131003FCF97 /* LaunchScreen.storyboard */; };
+		A0457E0E5C12B54CB6C65F84 /* Pods_dash_and_dine_mobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19033CC68B110FBF390354FB /* Pods_dash_and_dine_mobile.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		19033CC68B110FBF390354FB /* Pods_dash_and_dine_mobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dash_and_dine_mobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4664E2201E68EF8500811D66 /* dash-and-dine-mobile-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "dash-and-dine-mobile-Bridging-Header.h"; sourceTree = "<group>"; };
 		4664E2211E68EF8600811D66 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		4664E2221E68EF8600811D66 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
@@ -38,6 +40,8 @@
 		46865AAE1E68C131003FCF97 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		46865AB11E68C131003FCF97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		46865AB31E68C131003FCF97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6027C8219662E40F01BE5A39 /* Pods-dash-and-dine-mobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dash-and-dine-mobile.debug.xcconfig"; path = "Pods/Target Support Files/Pods-dash-and-dine-mobile/Pods-dash-and-dine-mobile.debug.xcconfig"; sourceTree = "<group>"; };
+		8F134E12D75653F8402A00DA /* Pods-dash-and-dine-mobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dash-and-dine-mobile.release.xcconfig"; path = "Pods/Target Support Files/Pods-dash-and-dine-mobile/Pods-dash-and-dine-mobile.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,12 +50,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				4664E2331E69405B00811D66 /* MapKit.framework in Frameworks */,
+				A0457E0E5C12B54CB6C65F84 /* Pods_dash_and_dine_mobile.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00543CBBD884CD078DB34316 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6027C8219662E40F01BE5A39 /* Pods-dash-and-dine-mobile.debug.xcconfig */,
+				8F134E12D75653F8402A00DA /* Pods-dash-and-dine-mobile.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		4664E2241E68EFF500811D66 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
@@ -66,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				4664E2321E69405B00811D66 /* MapKit.framework */,
+				19033CC68B110FBF390354FB /* Pods_dash_and_dine_mobile.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -76,6 +91,7 @@
 				46865AA61E68C131003FCF97 /* dash-and-dine-mobile */,
 				46865AA51E68C131003FCF97 /* Products */,
 				4664E2311E69405B00811D66 /* Frameworks */,
+				00543CBBD884CD078DB34316 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -113,9 +129,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 46865AB61E68C131003FCF97 /* Build configuration list for PBXNativeTarget "dash-and-dine-mobile" */;
 			buildPhases = (
+				A1DA1B8E9A485301FD0E786E /* [CP] Check Pods Manifest.lock */,
 				46865AA01E68C130003FCF97 /* Sources */,
 				46865AA11E68C130003FCF97 /* Frameworks */,
 				46865AA21E68C130003FCF97 /* Resources */,
+				323CF06D7DF0C2EF0F5713B5 /* [CP] Embed Pods Frameworks */,
+				1AF4B64E83B77F06252BDDDE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -173,6 +192,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1AF4B64E83B77F06252BDDDE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-dash-and-dine-mobile/Pods-dash-and-dine-mobile-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		323CF06D7DF0C2EF0F5713B5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-dash-and-dine-mobile/Pods-dash-and-dine-mobile-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A1DA1B8E9A485301FD0E786E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		46865AA01E68C130003FCF97 /* Sources */ = {
@@ -307,6 +374,7 @@
 		};
 		46865AB71E68C131003FCF97 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6027C8219662E40F01BE5A39 /* Pods-dash-and-dine-mobile.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -323,6 +391,7 @@
 		};
 		46865AB81E68C131003FCF97 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F134E12D75653F8402A00DA /* Pods-dash-and-dine-mobile.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;

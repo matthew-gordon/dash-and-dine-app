@@ -745,10 +745,12 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="czw-hC-fhl">
-                                <rect key="frame" x="20" y="681" width="374" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="czw-hC-fhl">
+                                <rect key="frame" x="8" y="678" width="398" height="50"/>
                                 <color key="backgroundColor" red="0.035294117649999998" green="0.5450980392" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="ii3-sc-YnA"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="21"/>
                                 <state key="normal" title="ADD PAYMENT">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -770,6 +772,11 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="czw-hC-fhl" secondAttribute="trailing" constant="8" id="eGw-zo-wQZ"/>
+                            <constraint firstItem="U6d-Fo-tdf" firstAttribute="top" secondItem="czw-hC-fhl" secondAttribute="bottom" constant="8" id="rYm-Er-TMp"/>
+                            <constraint firstItem="czw-hC-fhl" firstAttribute="leading" secondItem="5Vl-DJ-dzP" secondAttribute="leading" constant="8" id="y1g-TY-xpf"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="1co-7z-Wtd">
                         <barButtonItem key="leftBarButtonItem" image="menu-1" id="f1S-nj-hC3"/>
