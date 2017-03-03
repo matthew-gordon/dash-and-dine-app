@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4664E2231E68EF8600811D66 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4664E2221E68EF8600811D66 /* SWRevealViewController.m */; };
 		46865AA81E68C131003FCF97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46865AA71E68C131003FCF97 /* AppDelegate.swift */; };
 		46865AAA1E68C131003FCF97 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46865AA91E68C131003FCF97 /* ViewController.swift */; };
 		46865AAD1E68C131003FCF97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46865AAB1E68C131003FCF97 /* Main.storyboard */; };
@@ -15,6 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4664E2201E68EF8500811D66 /* dash-and-dine-mobile-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "dash-and-dine-mobile-Bridging-Header.h"; sourceTree = "<group>"; };
+		4664E2211E68EF8600811D66 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		4664E2221E68EF8600811D66 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		46865AA41E68C131003FCF97 /* dash-and-dine-mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "dash-and-dine-mobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		46865AA71E68C131003FCF97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		46865AA91E68C131003FCF97 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,6 +39,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4664E2241E68EFF500811D66 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				4664E2221E68EF8600811D66 /* SWRevealViewController.m */,
+				4664E2211E68EF8600811D66 /* SWRevealViewController.h */,
+				4664E2201E68EF8500811D66 /* dash-and-dine-mobile-Bridging-Header.h */,
+			);
+			name = Lib;
+			sourceTree = "<group>";
+		};
 		46865A9B1E68C130003FCF97 = {
 			isa = PBXGroup;
 			children = (
@@ -54,6 +68,7 @@
 		46865AA61E68C131003FCF97 /* dash-and-dine-mobile */ = {
 			isa = PBXGroup;
 			children = (
+				4664E2241E68EFF500811D66 /* Lib */,
 				46865AA71E68C131003FCF97 /* AppDelegate.swift */,
 				46865AA91E68C131003FCF97 /* ViewController.swift */,
 				46865AAB1E68C131003FCF97 /* Main.storyboard */,
@@ -96,6 +111,7 @@
 				TargetAttributes = {
 					46865AA31E68C130003FCF97 = {
 						CreatedOnToolsVersion = 8.2.1;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -138,6 +154,7 @@
 			files = (
 				46865AAA1E68C131003FCF97 /* ViewController.swift in Sources */,
 				46865AA81E68C131003FCF97 /* AppDelegate.swift in Sources */,
+				4664E2231E68EF8600811D66 /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,11 +277,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "dash-and-dine-mobile/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.slightright.dash-and-dine-mobile";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "dash-and-dine-mobile/dash-and-dine-mobile-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -273,11 +293,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "dash-and-dine-mobile/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.slightright.dash-and-dine-mobile";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "dash-and-dine-mobile/dash-and-dine-mobile-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -301,6 +323,7 @@
 				46865AB81E68C131003FCF97 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
