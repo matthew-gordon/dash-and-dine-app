@@ -117,10 +117,10 @@
             </objects>
             <point key="canvasLocation" x="-79.200000000000003" y="138.98050974512745"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Customer Menu Table View Controller-->
         <scene sceneID="wfz-UQ-9T4">
             <objects>
-                <tableViewController id="pHi-H9-Tty" sceneMemberID="viewController">
+                <tableViewController id="pHi-H9-Tty" customClass="CustomerMenuTableViewController" customModule="dash_and_dine_mobile" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="static" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="5Co-y9-JNw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -296,10 +296,10 @@
             </objects>
             <point key="canvasLocation" x="1437.68115942029" y="875.54347826086962"/>
         </scene>
-        <!--View Controller-->
+        <!--Restaurant View Controller-->
         <scene sceneID="Q5L-c3-MxF">
             <objects>
-                <viewController id="PRP-41-aSP" sceneMemberID="viewController">
+                <viewController id="PRP-41-aSP" customClass="RestaurantViewController" customModule="dash_and_dine_mobile" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fvg-Uk-yfK"/>
                         <viewControllerLayoutGuide type="bottom" id="FEF-7b-r9A"/>
@@ -371,6 +371,10 @@
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="PRP-41-aSP" id="SHz-ch-gYa"/>
+                                    <outlet property="delegate" destination="PRP-41-aSP" id="dO3-uj-xAc"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -389,6 +393,9 @@
                             <color key="tintColor" red="0.035294117649999998" green="0.5450980392" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="menuBarButton" destination="67F-ZM-QMl" id="Oz5-vt-lqD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dnK-Kq-jf3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -445,6 +452,6 @@
         <image name="tray2" width="64" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="XPO-zo-NnW"/>
+        <segue reference="fMd-3L-Zxv"/>
     </inferredMetricsTieBreakers>
 </document>

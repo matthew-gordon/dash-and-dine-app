@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4664E2231E68EF8600811D66 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4664E2221E68EF8600811D66 /* SWRevealViewController.m */; };
+		4664E2281E6907B700811D66 /* RestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4664E2271E6907B700811D66 /* RestaurantViewController.swift */; };
+		4664E22A1E69164B00811D66 /* CustomerMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4664E2291E69164B00811D66 /* CustomerMenuTableViewController.swift */; };
 		46865AA81E68C131003FCF97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46865AA71E68C131003FCF97 /* AppDelegate.swift */; };
 		46865AAA1E68C131003FCF97 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46865AA91E68C131003FCF97 /* ViewController.swift */; };
 		46865AAD1E68C131003FCF97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46865AAB1E68C131003FCF97 /* Main.storyboard */; };
@@ -19,6 +21,8 @@
 		4664E2201E68EF8500811D66 /* dash-and-dine-mobile-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "dash-and-dine-mobile-Bridging-Header.h"; sourceTree = "<group>"; };
 		4664E2211E68EF8600811D66 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		4664E2221E68EF8600811D66 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		4664E2271E6907B700811D66 /* RestaurantViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantViewController.swift; sourceTree = "<group>"; };
+		4664E2291E69164B00811D66 /* CustomerMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerMenuTableViewController.swift; sourceTree = "<group>"; };
 		46865AA41E68C131003FCF97 /* dash-and-dine-mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "dash-and-dine-mobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		46865AA71E68C131003FCF97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		46865AA91E68C131003FCF97 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -75,6 +79,8 @@
 				46865AAE1E68C131003FCF97 /* Assets.xcassets */,
 				46865AB01E68C131003FCF97 /* LaunchScreen.storyboard */,
 				46865AB31E68C131003FCF97 /* Info.plist */,
+				4664E2271E6907B700811D66 /* RestaurantViewController.swift */,
+				4664E2291E69164B00811D66 /* CustomerMenuTableViewController.swift */,
 			);
 			path = "dash-and-dine-mobile";
 			sourceTree = "<group>";
@@ -153,7 +159,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				46865AAA1E68C131003FCF97 /* ViewController.swift in Sources */,
+				4664E2281E6907B700811D66 /* RestaurantViewController.swift in Sources */,
 				46865AA81E68C131003FCF97 /* AppDelegate.swift in Sources */,
+				4664E22A1E69164B00811D66 /* CustomerMenuTableViewController.swift in Sources */,
 				4664E2231E68EF8600811D66 /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
