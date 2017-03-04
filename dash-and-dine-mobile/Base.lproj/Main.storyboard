@@ -294,7 +294,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.035294117649999998" green="0.5450980392" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="show" id="F7O-ag-yBu"/>
+                                            <segue destination="BYZ-38-t0r" kind="show" identifier="CustomerLogout" id="F7O-ag-yBu"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
