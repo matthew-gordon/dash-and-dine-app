@@ -7,5 +7,12 @@ target 'dash-and-dine-mobile' do
 
   # Pods for dash-and-dine-mobile
   pod 'Stripe'
+  pod 'FBSDKCoreKit'
+  pod 'FBSDKLoginKit'
+  pod 'FBSDKShareKit'
+  pod 'Alamofire'
+  pod 'SwiftyJSON'
+
+
 
 end
