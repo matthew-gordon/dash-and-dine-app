@@ -21,6 +21,8 @@
 		46865AAD1E68C131003FCF97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46865AAB1E68C131003FCF97 /* Main.storyboard */; };
 		46865AAF1E68C131003FCF97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46865AAE1E68C131003FCF97 /* Assets.xcassets */; };
 		46865AB21E68C131003FCF97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46865AB01E68C131003FCF97 /* LaunchScreen.storyboard */; };
+		46E4272C1E6B596B0095AB1C /* FBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E4272B1E6B596B0095AB1C /* FBManager.swift */; };
+		46E4272E1E6B5C2B0095AB1C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E4272D1E6B5C2B0095AB1C /* LoginViewController.swift */; };
 		A0457E0E5C12B54CB6C65F84 /* Pods_dash_and_dine_mobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19033CC68B110FBF390354FB /* Pods_dash_and_dine_mobile.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +47,8 @@
 		46865AB11E68C131003FCF97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		46865AB31E68C131003FCF97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46E4272A1E6B57BC0095AB1C /* dash-and-dine-mobile.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "dash-and-dine-mobile.entitlements"; sourceTree = "<group>"; };
+		46E4272B1E6B596B0095AB1C /* FBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBManager.swift; sourceTree = "<group>"; };
+		46E4272D1E6B5C2B0095AB1C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		6027C8219662E40F01BE5A39 /* Pods-dash-and-dine-mobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dash-and-dine-mobile.debug.xcconfig"; path = "Pods/Target Support Files/Pods-dash-and-dine-mobile/Pods-dash-and-dine-mobile.debug.xcconfig"; sourceTree = "<group>"; };
 		8F134E12D75653F8402A00DA /* Pods-dash-and-dine-mobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dash-and-dine-mobile.release.xcconfig"; path = "Pods/Target Support Files/Pods-dash-and-dine-mobile/Pods-dash-and-dine-mobile.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -126,6 +130,8 @@
 				4664E22F1E693F4700811D66 /* TrayViewController.swift */,
 				46274C7D1E69D77E0062FBCB /* PaymentViewController.swift */,
 				46274C7F1E69DD480062FBCB /* OrderViewController.swift */,
+				46E4272B1E6B596B0095AB1C /* FBManager.swift */,
+				46E4272D1E6B5C2B0095AB1C /* LoginViewController.swift */,
 			);
 			path = "dash-and-dine-mobile";
 			sourceTree = "<group>";
@@ -260,7 +266,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46E4272E1E6B5C2B0095AB1C /* LoginViewController.swift in Sources */,
 				46865AAA1E68C131003FCF97 /* ViewController.swift in Sources */,
+				46E4272C1E6B596B0095AB1C /* FBManager.swift in Sources */,
 				46274C801E69DD480062FBCB /* OrderViewController.swift in Sources */,
 				4664E22E1E6931AD00811D66 /* MealDetailsViewController.swift in Sources */,
 				4664E2301E693F4700811D66 /* TrayViewController.swift in Sources */,
