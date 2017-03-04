@@ -64,6 +64,9 @@
                                         <state key="normal" title="USE A DIFFERENT ACCOUNT">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="facebookLogout:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BEt-Yg-DYQ"/>
+                                        </connections>
                                     </button>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="hbU-ud-uyP">
                                         <rect key="frame" x="10" y="546" width="394" height="51"/>
@@ -115,6 +118,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="bLogin" destination="pYY-Zv-DWf" id="MK3-LZ-vYi"/>
+                        <outlet property="bLogout" destination="Uu3-mj-W3L" id="6zZ-a0-nFl"/>
                         <segue destination="ai4-qx-YAo" kind="showDetail" identifier="CustomerView" id="c0j-mj-PF1"/>
                     </connections>
                 </viewController>
@@ -305,6 +310,10 @@
                             <outlet property="delegate" destination="pHi-H9-Tty" id="vho-xo-npY"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="imgAvatar" destination="Dla-wa-xVb" id="oIp-7S-xjz"/>
+                        <outlet property="lbName" destination="C58-Zh-NDh" id="TKe-pQ-qoT"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1qJ-2O-E2Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -406,9 +415,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Zh7-3U-Z5Z">
-                        <barButtonItem key="leftBarButtonItem" image="menu-1" id="67F-ZM-QMl">
-                            <color key="tintColor" red="0.035294117649999998" green="0.5450980392" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
-                        </barButtonItem>
+                        <barButtonItem key="leftBarButtonItem" image="menu-1" id="67F-ZM-QMl"/>
                     </navigationItem>
                     <connections>
                         <outlet property="menuBarButton" destination="67F-ZM-QMl" id="Oz5-vt-lqD"/>
