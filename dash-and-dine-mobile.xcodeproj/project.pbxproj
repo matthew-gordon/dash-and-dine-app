@@ -17,40 +17,40 @@
 		4664E2301E693F4700811D66 /* TrayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4664E22F1E693F4700811D66 /* TrayViewController.swift */; };
 		4664E2331E69405B00811D66 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4664E2321E69405B00811D66 /* MapKit.framework */; };
 		46865AA81E68C131003FCF97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46865AA71E68C131003FCF97 /* AppDelegate.swift */; };
-		46865AAA1E68C131003FCF97 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46865AA91E68C131003FCF97 /* ViewController.swift */; };
 		46865AAD1E68C131003FCF97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46865AAB1E68C131003FCF97 /* Main.storyboard */; };
 		46865AAF1E68C131003FCF97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46865AAE1E68C131003FCF97 /* Assets.xcassets */; };
 		46865AB21E68C131003FCF97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46865AB01E68C131003FCF97 /* LaunchScreen.storyboard */; };
 		46E4272C1E6B596B0095AB1C /* FBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E4272B1E6B596B0095AB1C /* FBManager.swift */; };
 		46E4272E1E6B5C2B0095AB1C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E4272D1E6B5C2B0095AB1C /* LoginViewController.swift */; };
 		46E427341E6B69A00095AB1C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E427331E6B69A00095AB1C /* User.swift */; };
+		46E4273A1E6B77FD0095AB1C /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E427391E6B77FD0095AB1C /* APIManager.swift */; };
 		A0457E0E5C12B54CB6C65F84 /* Pods_dash_and_dine_mobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19033CC68B110FBF390354FB /* Pods_dash_and_dine_mobile.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		19033CC68B110FBF390354FB /* Pods_dash_and_dine_mobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dash_and_dine_mobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		46274C7D1E69D77E0062FBCB /* PaymentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
-		46274C7F1E69DD480062FBCB /* OrderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
+		46274C7D1E69D77E0062FBCB /* PaymentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PaymentViewController.swift; path = "dash-and-dine-mobile/PaymentViewController.swift"; sourceTree = "<group>"; };
+		46274C7F1E69DD480062FBCB /* OrderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OrderViewController.swift; path = "dash-and-dine-mobile/OrderViewController.swift"; sourceTree = "<group>"; };
 		4664E2201E68EF8500811D66 /* dash-and-dine-mobile-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "dash-and-dine-mobile-Bridging-Header.h"; sourceTree = "<group>"; };
 		4664E2211E68EF8600811D66 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		4664E2221E68EF8600811D66 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
-		4664E2271E6907B700811D66 /* RestaurantViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantViewController.swift; sourceTree = "<group>"; };
-		4664E2291E69164B00811D66 /* CustomerMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerMenuTableViewController.swift; sourceTree = "<group>"; };
-		4664E22B1E69208200811D66 /* MealListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealListTableViewController.swift; sourceTree = "<group>"; };
-		4664E22D1E6931AD00811D66 /* MealDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealDetailsViewController.swift; sourceTree = "<group>"; };
-		4664E22F1E693F4700811D66 /* TrayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrayViewController.swift; sourceTree = "<group>"; };
+		4664E2271E6907B700811D66 /* RestaurantViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RestaurantViewController.swift; path = "dash-and-dine-mobile/RestaurantViewController.swift"; sourceTree = "<group>"; };
+		4664E2291E69164B00811D66 /* CustomerMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomerMenuTableViewController.swift; path = "dash-and-dine-mobile/CustomerMenuTableViewController.swift"; sourceTree = "<group>"; };
+		4664E22B1E69208200811D66 /* MealListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MealListTableViewController.swift; path = "dash-and-dine-mobile/MealListTableViewController.swift"; sourceTree = "<group>"; };
+		4664E22D1E6931AD00811D66 /* MealDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MealDetailsViewController.swift; path = "dash-and-dine-mobile/MealDetailsViewController.swift"; sourceTree = "<group>"; };
+		4664E22F1E693F4700811D66 /* TrayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TrayViewController.swift; path = "dash-and-dine-mobile/TrayViewController.swift"; sourceTree = "<group>"; };
 		4664E2321E69405B00811D66 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		46865AA41E68C131003FCF97 /* dash-and-dine-mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "dash-and-dine-mobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		46865AA71E68C131003FCF97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		46865AA91E68C131003FCF97 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		46865AAC1E68C131003FCF97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		46865AAE1E68C131003FCF97 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		46865AB11E68C131003FCF97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		46865AB31E68C131003FCF97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46E4272A1E6B57BC0095AB1C /* dash-and-dine-mobile.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "dash-and-dine-mobile.entitlements"; sourceTree = "<group>"; };
-		46E4272B1E6B596B0095AB1C /* FBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBManager.swift; sourceTree = "<group>"; };
-		46E4272D1E6B5C2B0095AB1C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		46E427331E6B69A00095AB1C /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		46E4272B1E6B596B0095AB1C /* FBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FBManager.swift; path = "dash-and-dine-mobile/FBManager.swift"; sourceTree = "<group>"; };
+		46E4272D1E6B5C2B0095AB1C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = "dash-and-dine-mobile/LoginViewController.swift"; sourceTree = "<group>"; };
+		46E427331E6B69A00095AB1C /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = "dash-and-dine-mobile/User.swift"; sourceTree = "<group>"; };
+		46E427391E6B77FD0095AB1C /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		6027C8219662E40F01BE5A39 /* Pods-dash-and-dine-mobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dash-and-dine-mobile.debug.xcconfig"; path = "Pods/Target Support Files/Pods-dash-and-dine-mobile/Pods-dash-and-dine-mobile.debug.xcconfig"; sourceTree = "<group>"; };
 		8F134E12D75653F8402A00DA /* Pods-dash-and-dine-mobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dash-and-dine-mobile.release.xcconfig"; path = "Pods/Target Support Files/Pods-dash-and-dine-mobile/Pods-dash-and-dine-mobile.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -117,14 +117,42 @@
 		46865AA61E68C131003FCF97 /* dash-and-dine-mobile */ = {
 			isa = PBXGroup;
 			children = (
+				46E427351E6B759A0095AB1C /* Model */,
+				46E427381E6B773F0095AB1C /* Manager */,
+				46E427361E6B75A40095AB1C /* View */,
+				46E427371E6B75AD0095AB1C /* Controller */,
 				46E4272A1E6B57BC0095AB1C /* dash-and-dine-mobile.entitlements */,
 				4664E2241E68EFF500811D66 /* Lib */,
 				46865AA71E68C131003FCF97 /* AppDelegate.swift */,
-				46865AA91E68C131003FCF97 /* ViewController.swift */,
 				46865AAB1E68C131003FCF97 /* Main.storyboard */,
 				46865AAE1E68C131003FCF97 /* Assets.xcassets */,
 				46865AB01E68C131003FCF97 /* LaunchScreen.storyboard */,
 				46865AB31E68C131003FCF97 /* Info.plist */,
+			);
+			path = "dash-and-dine-mobile";
+			sourceTree = "<group>";
+		};
+		46E427351E6B759A0095AB1C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				46E427331E6B69A00095AB1C /* User.swift */,
+			);
+			name = Model;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		46E427361E6B75A40095AB1C /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		46E427371E6B75AD0095AB1C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				46E4272D1E6B5C2B0095AB1C /* LoginViewController.swift */,
 				4664E2271E6907B700811D66 /* RestaurantViewController.swift */,
 				4664E2291E69164B00811D66 /* CustomerMenuTableViewController.swift */,
 				4664E22B1E69208200811D66 /* MealListTableViewController.swift */,
@@ -132,11 +160,19 @@
 				4664E22F1E693F4700811D66 /* TrayViewController.swift */,
 				46274C7D1E69D77E0062FBCB /* PaymentViewController.swift */,
 				46274C7F1E69DD480062FBCB /* OrderViewController.swift */,
-				46E4272B1E6B596B0095AB1C /* FBManager.swift */,
-				46E4272D1E6B5C2B0095AB1C /* LoginViewController.swift */,
-				46E427331E6B69A00095AB1C /* User.swift */,
 			);
-			path = "dash-and-dine-mobile";
+			name = Controller;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		46E427381E6B773F0095AB1C /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				46E4272B1E6B596B0095AB1C /* FBManager.swift */,
+				46E427391E6B77FD0095AB1C /* APIManager.swift */,
+			);
+			name = Manager;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,7 +307,6 @@
 			files = (
 				46E427341E6B69A00095AB1C /* User.swift in Sources */,
 				46E4272E1E6B5C2B0095AB1C /* LoginViewController.swift in Sources */,
-				46865AAA1E68C131003FCF97 /* ViewController.swift in Sources */,
 				46E4272C1E6B596B0095AB1C /* FBManager.swift in Sources */,
 				46274C801E69DD480062FBCB /* OrderViewController.swift in Sources */,
 				4664E22E1E6931AD00811D66 /* MealDetailsViewController.swift in Sources */,
@@ -280,6 +315,7 @@
 				4664E22C1E69208200811D66 /* MealListTableViewController.swift in Sources */,
 				46865AA81E68C131003FCF97 /* AppDelegate.swift in Sources */,
 				4664E22A1E69164B00811D66 /* CustomerMenuTableViewController.swift in Sources */,
+				46E4273A1E6B77FD0095AB1C /* APIManager.swift in Sources */,
 				46274C7E1E69D77E0062FBCB /* PaymentViewController.swift in Sources */,
 				4664E2231E68EF8600811D66 /* SWRevealViewController.m in Sources */,
 			);
