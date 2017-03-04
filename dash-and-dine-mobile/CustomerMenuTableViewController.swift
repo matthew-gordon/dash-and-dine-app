@@ -13,7 +13,7 @@ class CustomerMenuTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+        view.backgroundColor = UIColor(red:0.04, green:0.55, blue:0.94, alpha:1.0)
     }
 
 }
