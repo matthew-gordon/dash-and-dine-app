@@ -119,8 +119,8 @@
 		46865AA61E68C131003FCF97 /* dash-and-dine-mobile */ = {
 			isa = PBXGroup;
 			children = (
-				46E427351E6B759A0095AB1C /* Model */,
 				46E427381E6B773F0095AB1C /* Manager */,
+				46E427351E6B759A0095AB1C /* Model */,
 				46E427361E6B75A40095AB1C /* View */,
 				46E427371E6B75AD0095AB1C /* Controller */,
 				46E4272A1E6B57BC0095AB1C /* dash-and-dine-mobile.entitlements */,

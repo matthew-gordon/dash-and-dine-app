@@ -12,7 +12,7 @@ import SwiftyJSON
 import FBSDKLoginKit
 
 class APIManager {
-
+    
     static let shared = APIManager()
     
     let baseURL = NSURL(string: BASE_URL)
@@ -21,15 +21,15 @@ class APIManager {
     var refreshToken = ""
     var expired = Date()
     
-    // API to login a User
+    // API to login an user
     func login(userType: String, completionHandler: @escaping (NSError?) -> Void) {
-    
-        let path = "api/social/convert-token"
+        
+        let path = "api/social/convert-token/"
         let url = baseURL!.appendingPathComponent(path)
         let params: [String: Any] = [
-            "grant_type": "conevrt-token",
+            "grant_type": "convert_token",
             "client_id": CLIENT_ID,
-            "client_Secret": CLIENT_SECRET,
+            "client_secret": CLIENT_SECRET,
             "backend": "facebook",
             "token": FBSDKAccessToken.current().tokenString,
             "user_type": userType
@@ -56,10 +56,10 @@ class APIManager {
         }
     }
     
-    // API to log a user out
+    // API to log an user out
     func logout(completionHandler: @escaping (NSError?) -> Void) {
-    
-        let path = "api/social/revoke-token"
+        
+        let path = "api/social/revoke-token/"
         let url = baseURL!.appendingPathComponent(path)
         let params: [String: Any] = [
             "client_id": CLIENT_ID,
@@ -67,18 +67,19 @@ class APIManager {
             "token": self.accessToken
         ]
         
-        Alamofire.request(url!, method: .post, parameters: params, encoding: URLEncoding(), headers: nil)
-            .responseString { (response) in
-                switch response.result {
-                case .success:
-                    completionHandler(nil)
-                    break
-                    
-                case .failure(let error):
-                    completionHandler(error as NSError?)
-                    break
-                }
+        Alamofire.request(url!, method: .post, parameters: params, encoding: URLEncoding(), headers: nil).responseString { (response) in
+            
+            switch response.result {
+            case .success:
+                completionHandler(nil)
+                break
+                
+            case .failure(let error):
+                completionHandler(error as NSError?)
+                break
             }
+        }
+        
         
     }
     
