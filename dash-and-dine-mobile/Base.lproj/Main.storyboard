@@ -341,7 +341,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexBackgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RestaurantCell" id="fhF-3M-KcX">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RestaurantCell" id="fhF-3M-KcX" customClass="RestaurantViewCell" customModule="dash_and_dine_mobile" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="226"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fhF-3M-KcX" id="ySd-el-QzD">
@@ -393,6 +393,9 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <connections>
+                                            <outlet property="imgRestaurantLogo" destination="pMa-Hj-SLd" id="Rq0-uP-esZ"/>
+                                            <outlet property="lbRestaurantAddress" destination="3XE-UD-tsQ" id="Fkg-nV-iYl"/>
+                                            <outlet property="lbRestaurantName" destination="zxF-yH-SEM" id="umX-gw-amd"/>
                                             <segue destination="CIa-Ji-w54" kind="show" identifier="MealList" id="FLk-ec-Siz"/>
                                         </connections>
                                     </tableViewCell>
@@ -419,6 +422,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="menuBarButton" destination="67F-ZM-QMl" id="Oz5-vt-lqD"/>
+                        <outlet property="tbvRestaurant" destination="HI5-ag-lat" id="2XG-Ih-hIp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dnK-Kq-jf3" userLabel="First Responder" sceneMemberID="firstResponder"/>
