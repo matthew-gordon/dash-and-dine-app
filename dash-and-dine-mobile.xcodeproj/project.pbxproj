@@ -18,6 +18,7 @@
 		4664E2331E69405B00811D66 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4664E2321E69405B00811D66 /* MapKit.framework */; };
 		467007721E6CC287000C3AA2 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467007711E6CC287000C3AA2 /* Meal.swift */; };
 		467007741E6CC3BD000C3AA2 /* MealViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467007731E6CC3BD000C3AA2 /* MealViewCell.swift */; };
+		467007761E6CD7CC000C3AA2 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467007751E6CD7CC000C3AA2 /* Helpers.swift */; };
 		46865AA81E68C131003FCF97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46865AA71E68C131003FCF97 /* AppDelegate.swift */; };
 		46865AAD1E68C131003FCF97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46865AAB1E68C131003FCF97 /* Main.storyboard */; };
 		46865AAF1E68C131003FCF97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46865AAE1E68C131003FCF97 /* Assets.xcassets */; };
@@ -47,6 +48,7 @@
 		4664E2321E69405B00811D66 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		467007711E6CC287000C3AA2 /* Meal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 		467007731E6CC3BD000C3AA2 /* MealViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealViewCell.swift; sourceTree = "<group>"; };
+		467007751E6CD7CC000C3AA2 /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		46865AA41E68C131003FCF97 /* dash-and-dine-mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "dash-and-dine-mobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		46865AA71E68C131003FCF97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		46865AAC1E68C131003FCF97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 				46E4272B1E6B596B0095AB1C /* FBManager.swift */,
 				46E427391E6B77FD0095AB1C /* APIManager.swift */,
 				46E4273B1E6B82E50095AB1C /* constants.swift */,
+				467007751E6CD7CC000C3AA2 /* Helpers.swift */,
 			);
 			name = Manager;
 			path = ..;
@@ -321,6 +324,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				46E427341E6B69A00095AB1C /* User.swift in Sources */,
+				467007761E6CD7CC000C3AA2 /* Helpers.swift in Sources */,
 				46E4272E1E6B5C2B0095AB1C /* LoginViewController.swift in Sources */,
 				46E4272C1E6B596B0095AB1C /* FBManager.swift in Sources */,
 				467007721E6CC287000C3AA2 /* Meal.swift in Sources */,
