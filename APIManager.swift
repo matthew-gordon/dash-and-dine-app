@@ -21,7 +21,7 @@ class APIManager {
     var refreshToken = ""
     var expired = Date()
     
-    // API to login an user
+    // API to login a user
     func login(userType: String, completionHandler: @escaping (NSError?) -> Void) {
         
         let path = "api/social/convert-token/"
@@ -56,7 +56,7 @@ class APIManager {
         }
     }
     
-    // API to log an user out
+    // API to log a user out
     func logout(completionHandler: @escaping (NSError?) -> Void) {
         
         let path = "api/social/revoke-token/"
@@ -81,6 +81,62 @@ class APIManager {
         }
         
         
+    }
+    
+    // API to refresh expired token
+    func refreshToken(completionHandler: @escaping () -> Void) {
+        
+        let path = "api/social/refresh-token/"
+        let url = baseURL?.appendingPathComponent(path)
+        let params: [String: Any] = [
+            "access_token": self.accessToken,
+            "refreshToken": self.refreshToken
+        ]
+        
+        if (Date() > self.expired) {
+            
+            Alamofire.request(url!, method: .post, parameters: params, encoding: URLEncoding(), headers: nil).responseJSON(completionHandler: { (response) in
+                
+                switch response.result {
+                
+                case .success(let value):
+                        let jsonData = JSON(value)
+                        self.accessToken = jsonData["access_token"].string!
+                        self.expired = Date().addingTimeInterval(TimeInterval(jsonData["expired"].int!))
+                        completionHandler()
+                        break
+                case .failure:
+                    break
+                }
+            })
+            
+        } else {
+            completionHandler()
+        }
+    }
+    
+    // API - GET all restaurants
+    func getAllRestaurants(completionHandler: @escaping (JSON) -> Void) {
+    
+        let path = "api/customer/restaurants/"
+        let url = baseURL?.appendingPathComponent(path)
+        
+        refreshToken { 
+            
+            Alamofire.request(url!, method: .get, parameters: nil, encoding: URLEncoding(), headers: nil).responseJSON(completionHandler: { (response) in
+                
+                switch response.result {
+                case .success(let value):
+                    let jsonData = JSON(value)
+                    completionHandler(jsonData)
+                    break
+                    
+                case .failure:
+                    completionHandler(JSON.null)
+                    break
+                }
+            })
+        }
     }
     
 }
