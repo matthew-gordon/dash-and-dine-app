@@ -115,7 +115,7 @@ class APIManager {
         }
     }
     
-    // Request Server
+    // Request Server function
     func requestSever(_ method: HTTPMethod,_ path: String,_ params: [String: Any]?,_ encoding: ParameterEncoding,_ completionHandler: @escaping (JSON) -> Void) {
         
         let url = baseURL?.appendingPathComponent(path)

@@ -451,7 +451,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MealCell" id="QoX-vT-Yr9">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MealCell" id="QoX-vT-Yr9" customClass="MealViewCell" customModule="dash_and_dine_mobile" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="72" width="414" height="140"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QoX-vT-Yr9" id="H7S-zw-VXU">
@@ -499,6 +499,10 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="imgMealImage" destination="CIR-nc-Vgc" id="YnB-uI-Oho"/>
+                                    <outlet property="lbMealName" destination="dFn-5z-Yu4" id="t36-xc-wDN"/>
+                                    <outlet property="lbMealPrice" destination="LUc-OR-71L" id="9Tv-t8-uV3"/>
+                                    <outlet property="lbMealShortDescription" destination="Ift-Ro-aIU" id="dik-oe-tpq"/>
                                     <segue destination="Pfn-hR-QQG" kind="show" identifier="MealDetails" id="Oej-7Y-qtR"/>
                                 </connections>
                             </tableViewCell>
