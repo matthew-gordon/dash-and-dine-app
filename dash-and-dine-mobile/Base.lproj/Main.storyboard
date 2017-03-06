@@ -886,7 +886,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Siz-n5-WwI" kind="show" identifier="ViewOrder" id="hFv-7y-uJa"/>
+                                    <action selector="placeOrder:" destination="lBV-9O-WcB" eventType="touchUpInside" id="ZW4-ra-AZ0"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -901,6 +901,7 @@
                     </view>
                     <connections>
                         <outlet property="cardTextField" destination="lL2-mL-nuz" id="asm-3c-T4P"/>
+                        <segue destination="Siz-n5-WwI" kind="show" identifier="ViewOrder" id="IP3-dK-5nk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zVW-qs-FWs" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -936,7 +937,7 @@
                                     <constraint firstAttribute="height" constant="100" id="4VS-Ma-WKg"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="OrderItemCell" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="OrderItemCell" id="pyj-N2-IxX">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="OrderItemCell" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="OrderItemCell" id="pyj-N2-IxX" customClass="OrderViewCell" customModule="dash_and_dine_mobile" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="404" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pyj-N2-IxX" id="k4Q-ff-b5M">
@@ -981,6 +982,11 @@
                                                 <constraint firstItem="eMv-2b-pal" firstAttribute="centerY" secondItem="k4Q-ff-b5M" secondAttribute="centerY" id="uLm-Zb-Lwx"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lbMealName" destination="sVh-Jv-kWB" id="bQb-8K-yzH"/>
+                                            <outlet property="lbQty" destination="eMv-2b-pal" id="U5Q-3B-kH5"/>
+                                            <outlet property="lbSubTotal" destination="Xgg-UU-9Hk" id="Fah-UG-Tl0"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -1011,6 +1017,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="menuBarButton" destination="u93-c9-FsS" id="Grk-Gs-RAi"/>
+                        <outlet property="tbvMeals" destination="CEv-HQ-LjA" id="T4x-R4-Jgz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1gq-uq-k3S" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1106,6 +1113,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="fMd-3L-Zxv"/>
         <segue reference="zNj-c3-Ihd"/>
-        <segue reference="hFv-7y-uJa"/>
+        <segue reference="IP3-dK-5nk"/>
     </inferredMetricsTieBreakers>
 </document>

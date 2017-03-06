@@ -21,7 +21,7 @@ class APIManager {
     var refreshToken = ""
     var expired = Date()
     
-    // API to login a user
+    // API to login an user
     func login(userType: String, completionHandler: @escaping (NSError?) -> Void) {
         
         let path = "api/social/convert-token/"
@@ -56,7 +56,7 @@ class APIManager {
         }
     }
     
-    // API to log a user out
+    // API to log an user out
     func logout(completionHandler: @escaping (NSError?) -> Void) {
         
         let path = "api/social/revoke-token/"
@@ -83,14 +83,14 @@ class APIManager {
         
     }
     
-    // API to refresh expired token
-    func refreshToken(completionHandler: @escaping () -> Void) {
+    // API to refresh the token when it's expired
+    func refreshTokenIfNeed(completionHandler: @escaping () -> Void) {
         
         let path = "api/social/refresh-token/"
         let url = baseURL?.appendingPathComponent(path)
         let params: [String: Any] = [
             "access_token": self.accessToken,
-            "refreshToken": self.refreshToken
+            "refresh_token": self.refreshToken
         ]
         
         if (Date() > self.expired) {
@@ -98,32 +98,30 @@ class APIManager {
             Alamofire.request(url!, method: .post, parameters: params, encoding: URLEncoding(), headers: nil).responseJSON(completionHandler: { (response) in
                 
                 switch response.result {
-                
                 case .success(let value):
-                        let jsonData = JSON(value)
-                        self.accessToken = jsonData["access_token"].string!
-                        self.expired = Date().addingTimeInterval(TimeInterval(jsonData["expired"].int!))
-                        completionHandler()
-                        break
+                    let jsonData = JSON(value)
+                    self.accessToken = jsonData["access_token"].string!
+                    self.expired = Date().addingTimeInterval(TimeInterval(jsonData["expires_in"].int!))
+                    completionHandler()
+                    break
+                    
                 case .failure:
                     break
                 }
             })
-            
         } else {
             completionHandler()
         }
     }
     
     // Request Server function
-    func requestServer(_ method: HTTPMethod,_ path: String,_ params: [String: Any]?,_ encoding: ParameterEncoding,_ completionHandler: @escaping (JSON) -> Void) {
+    func requestServer(_ method: HTTPMethod,_ path: String,_ params: [String: Any]?,_ encoding: ParameterEncoding,_ completionHandler: @escaping (JSON) -> Void ) {
         
         let url = baseURL?.appendingPathComponent(path)
         
-        refreshToken {
+        refreshTokenIfNeed {
             
-            Alamofire.request(url!, method: method, parameters: params, encoding: encoding, headers: nil)
-                .responseJSON { response in
+            Alamofire.request(url!, method: method, parameters: params, encoding: encoding, headers: nil).responseJSON{ response in
                 
                 switch response.result {
                 case .success(let value):
@@ -132,7 +130,7 @@ class APIManager {
                     break
                     
                 case .failure:
-                    completionHandler(JSON.null)
+                    completionHandler(nil)
                     break
                 }
             }
@@ -140,22 +138,23 @@ class APIManager {
         
     }
     
-    // API - GET all restaurants
+    // API - Getting Restaurants list
     func getAllRestaurants(completionHandler: @escaping (JSON) -> Void) {
-    
+        
         let path = "api/customer/restaurants/"
         requestServer(.get, path, nil, URLEncoding(), completionHandler)
+        
     }
     
-    // API - GET all meals 
+    // API - Getting list of Meals of a Restaurant.
     func getAllMeals(restaurantId: Int, completionHandler: @escaping (JSON) -> Void) {
         
         let path = "api/customer/meals/\(restaurantId)"
         requestServer(.get, path, nil, URLEncoding(), completionHandler)
     }
     
-    // API - Create new order
-    func createOrder(stripeToken: String?, completionHandler: @escaping (JSON) -> Void) {
+    // API - Creating new order
+    func createOrder(stripeToken: String, completionHandler: @escaping (JSON) -> Void) {
         
         let path = "api/customer/order/add/"
         let simpleArray = Tray.currentTray.items
@@ -169,26 +168,28 @@ class APIManager {
         if JSONSerialization.isValidJSONObject(jsonArray) {
             
             do {
+                
                 let data = try JSONSerialization.data(withJSONObject: jsonArray, options: [])
-                let dataString = NSString(data: data, encoding: String.Encoding.utf8.rawValue)
+                let dataString = NSString(data: data, encoding: String.Encoding.utf8.rawValue)!
                 
                 let params: [String: Any] = [
                     "access_token": self.accessToken,
-                    "stripe_token": stripeToken!,
-                    "restaurant_id": "\(Tray.currentTray.restaurant!.id)",
-                    "order_id": dataString!,
+                    "stripe_token": stripeToken,
+                    "restaurant_id": "\(Tray.currentTray.restaurant!.id!)",
+                    "order_details": dataString,
                     "address": Tray.currentTray.address!
                 ]
                 
                 requestServer(.post, path, params, URLEncoding(), completionHandler)
+                
             }
             catch {
-                print("JSON Serialization failed: \(error)")
+                print("JSON serialization failed: \(error)")
             }
         }
     }
     
-    //API - Get latest order
+    // API - Getting the latest order (Customer)
     func getLatestOrder(completionHandler: @escaping (JSON) -> Void) {
         
         let path = "api/customer/order/latest/"

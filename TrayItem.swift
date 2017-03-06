@@ -32,7 +32,7 @@ class Tray {
         var total: Float = 0
         
         for item in self.items {
-            total = total + Float(item.qty)
+            total = total + Float(item.qty) * item.meal.price!
         }
         
         return total
