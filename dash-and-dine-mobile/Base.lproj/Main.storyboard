@@ -529,7 +529,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blank_image" translatesAutoresizingMaskIntoConstraints="NO" id="hLz-Dv-3nV">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blank_image" translatesAutoresizingMaskIntoConstraints="NO" id="hLz-Dv-3nV">
                                 <rect key="frame" x="0.0" y="64" width="414" height="320"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="320" id="QBX-q3-S6F"/>
@@ -655,6 +655,11 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="imgMealImage" destination="hLz-Dv-3nV" id="Oer-p9-7B5"/>
+                        <outlet property="lbMealName" destination="H6n-8Z-3Rk" id="str-4g-koh"/>
+                        <outlet property="lbMealShortDescription" destination="wN7-z6-pZp" id="EkI-kH-gyc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G60-os-sPB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1072,7 +1077,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="fMd-3L-Zxv"/>
-        <segue reference="quM-cf-B9K"/>
+        <segue reference="zNj-c3-Ihd"/>
         <segue reference="hFv-7y-uJa"/>
     </inferredMetricsTieBreakers>
 </document>
