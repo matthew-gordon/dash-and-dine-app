@@ -116,7 +116,7 @@ class APIManager {
     }
     
     // Request Server function
-    func requestSever(_ method: HTTPMethod,_ path: String,_ params: [String: Any]?,_ encoding: ParameterEncoding,_ completionHandler: @escaping (JSON) -> Void) {
+    func requestServer(_ method: HTTPMethod,_ path: String,_ params: [String: Any]?,_ encoding: ParameterEncoding,_ completionHandler: @escaping (JSON) -> Void) {
         
         let url = baseURL?.appendingPathComponent(path)
         
@@ -144,13 +144,58 @@ class APIManager {
     func getAllRestaurants(completionHandler: @escaping (JSON) -> Void) {
     
         let path = "api/customer/restaurants/"
-        requestSever(.get, path, nil, URLEncoding(), completionHandler)
+        requestServer(.get, path, nil, URLEncoding(), completionHandler)
     }
     
     // API - GET all meals 
     func getAllMeals(restaurantId: Int, completionHandler: @escaping (JSON) -> Void) {
         
         let path = "api/customer/meals/\(restaurantId)"
-        requestSever(.get, path, nil, URLEncoding(), completionHandler)
+        requestServer(.get, path, nil, URLEncoding(), completionHandler)
+    }
+    
+    // API - Create new order
+    func createOrder(stripeToken: String?, completionHandler: @escaping (JSON) -> Void) {
+        
+        let path = "api/customer/order/add/"
+        let simpleArray = Tray.currentTray.items
+        let jsonArray = simpleArray.map { item in
+            return [
+                "meal_id": item.meal.id!,
+                "quantity": item.qty
+            ]
+        }
+        
+        if JSONSerialization.isValidJSONObject(jsonArray) {
+            
+            do {
+                let data = try JSONSerialization.data(withJSONObject: jsonArray, options: [])
+                let dataString = NSString(data: data, encoding: String.Encoding.utf8.rawValue)
+                
+                let params: [String: Any] = [
+                    "access_token": self.accessToken,
+                    "stripe_token": stripeToken!,
+                    "restaurant_id": "\(Tray.currentTray.restaurant!.id)",
+                    "order_id": dataString!,
+                    "address": Tray.currentTray.address!
+                ]
+                
+                requestServer(.post, path, params, URLEncoding(), completionHandler)
+            }
+            catch {
+                print("JSON Serialization failed: \(error)")
+            }
+        }
+    }
+    
+    //API - Get latest order
+    func getLatestOrder(completionHandler: @escaping (JSON) -> Void) {
+        
+        let path = "api/customer/order/latest/"
+        let params: [String: Any] = [
+            "access_token": self.accessToken
+        ]
+        
+        requestServer(.get, path, params, URLEncoding(), completionHandler)
     }
 }

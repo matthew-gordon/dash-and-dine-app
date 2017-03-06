@@ -8,6 +8,7 @@
 
 import UIKit
 import FBSDKCoreKit
+import Stripe
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -24,6 +25,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         UINavigationBar.appearance().tintColor = UIColor.white
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
+        
+        STPPaymentConfiguration.shared().publishableKey = STRIPE_PUBLIC_KEY
         
         return FBSDKApplicationDelegate.sharedInstance().application(
             application,
