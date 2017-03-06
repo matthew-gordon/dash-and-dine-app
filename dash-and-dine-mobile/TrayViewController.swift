@@ -8,6 +8,7 @@
 
 import UIKit
 import MapKit
+import CoreLocation
 
 class TrayViewController: UIViewController {
 
@@ -20,6 +21,8 @@ class TrayViewController: UIViewController {
     @IBOutlet weak var textBoxAddress: UITextField!
     @IBOutlet weak var map: MKMapView!
     @IBOutlet weak var bAddPayment: UIButton!
+    
+    var locationManager: CLLocationManager!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,6 +55,19 @@ class TrayViewController: UIViewController {
             
             loadMeals()
         }
+        
+        // Show current users location
+        if CLLocationManager.locationServicesEnabled() {
+            
+            locationManager = CLLocationManager()
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            locationManager.requestAlwaysAuthorization()
+            locationManager.startUpdatingLocation()
+            
+            self.map.showsUserLocation = true
+            
+        }
     }
     
     func loadMeals() {
@@ -79,6 +95,22 @@ class TrayViewController: UIViewController {
             Tray.currentTray.address = textBoxAddress.text
             self.performSegue(withIdentifier: "AddPayment", sender: self)
         }
+    }
+}
+
+extension TrayViewController: CLLocationManagerDelegate {
+
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
+        let location = locations.last! as CLLocation
+        
+        let center = CLLocationCoordinate2D(
+            latitude: location.coordinate.latitude,
+            longitude: location.coordinate.longitude)
+        
+        let reigon = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
+        
+        self.map.setRegion(reigon, animated: true)
     }
 }
 

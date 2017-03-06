@@ -21,6 +21,7 @@
 		467007761E6CD7CC000C3AA2 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467007751E6CD7CC000C3AA2 /* Helpers.swift */; };
 		467007781E6CFFC0000C3AA2 /* TrayItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467007771E6CFFC0000C3AA2 /* TrayItem.swift */; };
 		4670077A1E6D0F33000C3AA2 /* TrayViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467007791E6D0F33000C3AA2 /* TrayViewCell.swift */; };
+		4670077C1E6D19A4000C3AA2 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4670077B1E6D19A4000C3AA2 /* CoreLocation.framework */; };
 		46865AA81E68C131003FCF97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46865AA71E68C131003FCF97 /* AppDelegate.swift */; };
 		46865AAD1E68C131003FCF97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46865AAB1E68C131003FCF97 /* Main.storyboard */; };
 		46865AAF1E68C131003FCF97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46865AAE1E68C131003FCF97 /* Assets.xcassets */; };
@@ -53,6 +54,7 @@
 		467007751E6CD7CC000C3AA2 /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		467007771E6CFFC0000C3AA2 /* TrayItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrayItem.swift; sourceTree = "<group>"; };
 		467007791E6D0F33000C3AA2 /* TrayViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrayViewCell.swift; sourceTree = "<group>"; };
+		4670077B1E6D19A4000C3AA2 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		46865AA41E68C131003FCF97 /* dash-and-dine-mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "dash-and-dine-mobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		46865AA71E68C131003FCF97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		46865AAC1E68C131003FCF97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4670077C1E6D19A4000C3AA2 /* CoreLocation.framework in Frameworks */,
 				4664E2331E69405B00811D66 /* MapKit.framework in Frameworks */,
 				A0457E0E5C12B54CB6C65F84 /* Pods_dash_and_dine_mobile.framework in Frameworks */,
 			);
@@ -106,6 +109,7 @@
 		4664E2311E69405B00811D66 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4670077B1E6D19A4000C3AA2 /* CoreLocation.framework */,
 				4664E2321E69405B00811D66 /* MapKit.framework */,
 				19033CC68B110FBF390354FB /* Pods_dash_and_dine_mobile.framework */,
 			);
