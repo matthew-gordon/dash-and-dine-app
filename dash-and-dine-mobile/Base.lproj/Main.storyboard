@@ -688,7 +688,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gBI-M3-R0I">
+                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gBI-M3-R0I">
                                 <rect key="frame" x="0.0" y="64" width="414" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -744,7 +744,7 @@
                                     <outlet property="delegate" destination="k8e-c6-hhH" id="6qo-U6-vFu"/>
                                 </connections>
                             </tableView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JG1-ob-xAx">
+                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JG1-ob-xAx">
                                 <rect key="frame" x="0.0" y="264" width="414" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
@@ -770,7 +770,7 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gK2-2N-hJF">
+                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gK2-2N-hJF">
                                 <rect key="frame" x="0.0" y="324" width="414" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
@@ -791,7 +791,7 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="czw-hC-fhl">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="czw-hC-fhl">
                                 <rect key="frame" x="8" y="678" width="398" height="50"/>
                                 <color key="backgroundColor" red="0.035294117649999998" green="0.5450980392" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -805,7 +805,7 @@
                                     <segue destination="lBV-9O-WcB" kind="show" id="OY0-na-H5o"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xiV-ej-dcQ">
+                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xiV-ej-dcQ">
                                 <rect key="frame" x="5" y="389" width="404" height="287"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
@@ -831,7 +831,15 @@
                         <barButtonItem key="leftBarButtonItem" image="menu-1" id="f1S-nj-hC3"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="bAddPayment" destination="czw-hC-fhl" id="I7m-4U-ttR"/>
+                        <outlet property="lbTotal" destination="mG9-Aj-FYy" id="rPb-5q-EFR"/>
+                        <outlet property="map" destination="igV-g0-GFU" id="Quw-sI-308"/>
                         <outlet property="menuBarButton" destination="f1S-nj-hC3" id="zJ8-xZ-s6X"/>
+                        <outlet property="tbvMeals" destination="gBI-M3-R0I" id="gCr-VD-fGU"/>
+                        <outlet property="textBoxAddress" destination="V6D-WI-Baz" id="Ues-MR-eIU"/>
+                        <outlet property="viewAddress" destination="gK2-2N-hJF" id="kug-Jt-SJT"/>
+                        <outlet property="viewMap" destination="xiV-ej-dcQ" id="eC2-xE-2x1"/>
+                        <outlet property="viewTotal" destination="JG1-ob-xAx" id="K5M-3i-0VD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dvV-za-pPC" userLabel="First Responder" sceneMemberID="firstResponder"/>
