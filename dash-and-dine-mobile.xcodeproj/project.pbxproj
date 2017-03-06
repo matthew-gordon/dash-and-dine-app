@@ -31,7 +31,7 @@
 		46E4272E1E6B5C2B0095AB1C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E4272D1E6B5C2B0095AB1C /* LoginViewController.swift */; };
 		46E427341E6B69A00095AB1C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E427331E6B69A00095AB1C /* User.swift */; };
 		46E4273A1E6B77FD0095AB1C /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E427391E6B77FD0095AB1C /* APIManager.swift */; };
-		46E4273C1E6B82E50095AB1C /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E4273B1E6B82E50095AB1C /* constants.swift */; };
+		46E4273C1E6B82E50095AB1C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E4273B1E6B82E50095AB1C /* Constants.swift */; };
 		46E4273E1E6BA0280095AB1C /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E4273D1E6BA0280095AB1C /* Restaurant.swift */; };
 		46E427421E6BA6E80095AB1C /* RestaurantViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E427411E6BA6E80095AB1C /* RestaurantViewCell.swift */; };
 		A0457E0E5C12B54CB6C65F84 /* Pods_dash_and_dine_mobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19033CC68B110FBF390354FB /* Pods_dash_and_dine_mobile.framework */; };
@@ -68,7 +68,7 @@
 		46E4272D1E6B5C2B0095AB1C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = "dash-and-dine-mobile/LoginViewController.swift"; sourceTree = "<group>"; };
 		46E427331E6B69A00095AB1C /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = "dash-and-dine-mobile/User.swift"; sourceTree = "<group>"; };
 		46E427391E6B77FD0095AB1C /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
-		46E4273B1E6B82E50095AB1C /* constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
+		46E4273B1E6B82E50095AB1C /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		46E4273D1E6BA0280095AB1C /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		46E427411E6BA6E80095AB1C /* RestaurantViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantViewCell.swift; sourceTree = "<group>"; };
 		6027C8219662E40F01BE5A39 /* Pods-dash-and-dine-mobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dash-and-dine-mobile.debug.xcconfig"; path = "Pods/Target Support Files/Pods-dash-and-dine-mobile/Pods-dash-and-dine-mobile.debug.xcconfig"; sourceTree = "<group>"; };
@@ -199,7 +199,7 @@
 			children = (
 				46E4272B1E6B596B0095AB1C /* FBManager.swift */,
 				46E427391E6B77FD0095AB1C /* APIManager.swift */,
-				46E4273B1E6B82E50095AB1C /* constants.swift */,
+				46E4273B1E6B82E50095AB1C /* Constants.swift */,
 				467007751E6CD7CC000C3AA2 /* Helpers.swift */,
 			);
 			name = Manager;
@@ -343,7 +343,7 @@
 				46E4272E1E6B5C2B0095AB1C /* LoginViewController.swift in Sources */,
 				46E4272C1E6B596B0095AB1C /* FBManager.swift in Sources */,
 				467007721E6CC287000C3AA2 /* Meal.swift in Sources */,
-				46E4273C1E6B82E50095AB1C /* constants.swift in Sources */,
+				46E4273C1E6B82E50095AB1C /* Constants.swift in Sources */,
 				46274C801E69DD480062FBCB /* OrderViewController.swift in Sources */,
 				46E4273E1E6BA0280095AB1C /* Restaurant.swift in Sources */,
 				467007781E6CFFC0000C3AA2 /* TrayItem.swift in Sources */,
