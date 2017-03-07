@@ -58,10 +58,10 @@ class OrderViewController: UIViewController {
                 let from = order["restaurant"]["address"].string!
                 let to = order["address"].string!
                 
-                self.getLocation(from, "Restaurant", { (src) in
+                self.getLocation(from, "RESTAURANT", { (src) in
                     self.source = src
                     
-                    self.getLocation(to, "Customer", { (dest) in
+                    self.getLocation(to, "CUSTOMER", { (dest) in
                         self.destination = dest
                         self.getDirections()
                     })
@@ -70,7 +70,7 @@ class OrderViewController: UIViewController {
                 if order["status"] != "Delivered" {
                     self.setTimer()
                 }
-            } // Else display label showing that usr doesn't have any order, hide UI controlsq
+            } // else display label showing that user doesn't have any order, hide UI controlsq
         }
     }
     
@@ -100,11 +100,11 @@ class OrderViewController: UIViewController {
                 
                 // Create pin annotaion for driver
                 if self.driverPin != nil {
-                    
                     self.driverPin.coordinate = coordinate
                 } else {
                     self.driverPin = MKPointAnnotation()
                     self.driverPin.coordinate = coordinate
+                    self.driverPin.title = "DRIVER"
                     self.map.addAnnotation(self.driverPin)
                 }
                 
@@ -134,7 +134,6 @@ class OrderViewController: UIViewController {
 extension OrderViewController: MKMapViewDelegate {
     
     // #1 - Delegate method of MKMapViewDelegate
-    
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
         
         let renderer = MKPolylineRenderer(overlay: overlay)
@@ -196,19 +195,41 @@ extension OrderViewController: MKMapViewDelegate {
         for route in response.routes {
             self.map.add(route.polyline, level: MKOverlayLevel.aboveRoads)
         }
+    }
+    
+    // #5 - Customize pin point with image
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         
-        var zoomRect = MKMapRectNull
-        for annotation in self.map.annotations {
-            let annotationPoint = MKMapPointForCoordinate(annotation.coordinate)
-            let pointRect = MKMapRectMake(annotationPoint.x, annotationPoint.y, 0.1, 0.1)
-            zoomRect = MKMapRectUnion(zoomRect, pointRect)
+        let annotationIdentifier = "MyPin"
+        
+        var annotationView: MKAnnotationView?
+        if let dequeueAnnotationView = mapView.dequeueReusableAnnotationView(withIdentifier: annotationIdentifier) {
+        
+            annotationView = dequeueAnnotationView
+            annotationView?.annotation = annotation
+        } else {
+        
+            annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: annotationIdentifier)
         }
         
-        let insetWidth = -zoomRect.size.width * 0.2
-        let insetHeight = -zoomRect.size.height * 0.2
-        let insetRect = MKMapRectInset(zoomRect, insetWidth, insetHeight)
+        if let annotationView = annotationView, let name = annotation.title! {
+            switch name {
+            case "DRIVER":
+                annotationView.canShowCallout = true
+                annotationView.image = UIImage(named: "driver_pin")
+            case "RESTAURANT":
+                annotationView.canShowCallout = true
+                annotationView.image = UIImage(named: "food_pin")
+            case "CUSTOMER":
+                annotationView.canShowCallout = true
+                annotationView.image = UIImage(named: "customer_pin")
+            default:
+                annotationView.canShowCallout = true
+                annotationView.image = UIImage(named: "driver_pin")
+            }
+        }
         
-        self.map.setVisibleMapRect(insetRect, animated: true)
+        return annotationView
     }
 }
 
