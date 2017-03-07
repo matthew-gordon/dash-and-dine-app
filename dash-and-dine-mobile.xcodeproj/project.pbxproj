@@ -24,6 +24,7 @@
 		4670077C1E6D19A4000C3AA2 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4670077B1E6D19A4000C3AA2 /* CoreLocation.framework */; };
 		4670077E1E6DEBF6000C3AA2 /* OrderViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4670077D1E6DEBF6000C3AA2 /* OrderViewCell.swift */; };
 		467007801E6E3AF4000C3AA2 /* DriverOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4670077F1E6E3AF4000C3AA2 /* DriverOrderViewController.swift */; };
+		467007881E6E3E1F000C3AA2 /* DriverMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467007871E6E3E1F000C3AA2 /* DriverMenuViewController.swift */; };
 		46865AA81E68C131003FCF97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46865AA71E68C131003FCF97 /* AppDelegate.swift */; };
 		46865AAD1E68C131003FCF97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46865AAB1E68C131003FCF97 /* Main.storyboard */; };
 		46865AAF1E68C131003FCF97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46865AAE1E68C131003FCF97 /* Assets.xcassets */; };
@@ -59,6 +60,7 @@
 		4670077B1E6D19A4000C3AA2 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		4670077D1E6DEBF6000C3AA2 /* OrderViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderViewCell.swift; sourceTree = "<group>"; };
 		4670077F1E6E3AF4000C3AA2 /* DriverOrderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriverOrderViewController.swift; sourceTree = "<group>"; };
+		467007871E6E3E1F000C3AA2 /* DriverMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriverMenuViewController.swift; sourceTree = "<group>"; };
 		46865AA41E68C131003FCF97 /* dash-and-dine-mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "dash-and-dine-mobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		46865AA71E68C131003FCF97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		46865AAC1E68C131003FCF97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -120,6 +122,66 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		467007811E6E3D71000C3AA2 /* Customer */ = {
+			isa = PBXGroup;
+			children = (
+				46E427331E6B69A00095AB1C /* User.swift */,
+				46E4273D1E6BA0280095AB1C /* Restaurant.swift */,
+				467007711E6CC287000C3AA2 /* Meal.swift */,
+				467007771E6CFFC0000C3AA2 /* TrayItem.swift */,
+			);
+			name = Customer;
+			sourceTree = "<group>";
+		};
+		467007821E6E3D77000C3AA2 /* Driver */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Driver;
+			sourceTree = "<group>";
+		};
+		467007831E6E3D84000C3AA2 /* Customer */ = {
+			isa = PBXGroup;
+			children = (
+				46E427411E6BA6E80095AB1C /* RestaurantViewCell.swift */,
+				467007731E6CC3BD000C3AA2 /* MealViewCell.swift */,
+				467007791E6D0F33000C3AA2 /* TrayViewCell.swift */,
+				4670077D1E6DEBF6000C3AA2 /* OrderViewCell.swift */,
+			);
+			name = Customer;
+			sourceTree = "<group>";
+		};
+		467007841E6E3D89000C3AA2 /* Driver */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Driver;
+			sourceTree = "<group>";
+		};
+		467007851E6E3D95000C3AA2 /* Customer */ = {
+			isa = PBXGroup;
+			children = (
+				46E4272D1E6B5C2B0095AB1C /* LoginViewController.swift */,
+				4664E2271E6907B700811D66 /* RestaurantViewController.swift */,
+				4664E2291E69164B00811D66 /* CustomerMenuTableViewController.swift */,
+				4664E22B1E69208200811D66 /* MealListTableViewController.swift */,
+				4664E22D1E6931AD00811D66 /* MealDetailsViewController.swift */,
+				4664E22F1E693F4700811D66 /* TrayViewController.swift */,
+				46274C7D1E69D77E0062FBCB /* PaymentViewController.swift */,
+				46274C7F1E69DD480062FBCB /* OrderViewController.swift */,
+			);
+			name = Customer;
+			sourceTree = "<group>";
+		};
+		467007861E6E3DA0000C3AA2 /* Driver */ = {
+			isa = PBXGroup;
+			children = (
+				4670077F1E6E3AF4000C3AA2 /* DriverOrderViewController.swift */,
+				467007871E6E3E1F000C3AA2 /* DriverMenuViewController.swift */,
+			);
+			name = Driver;
+			sourceTree = "<group>";
+		};
 		46865A9B1E68C130003FCF97 = {
 			isa = PBXGroup;
 			children = (
@@ -159,10 +221,8 @@
 		46E427351E6B759A0095AB1C /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				46E427331E6B69A00095AB1C /* User.swift */,
-				46E4273D1E6BA0280095AB1C /* Restaurant.swift */,
-				467007711E6CC287000C3AA2 /* Meal.swift */,
-				467007771E6CFFC0000C3AA2 /* TrayItem.swift */,
+				467007821E6E3D77000C3AA2 /* Driver */,
+				467007811E6E3D71000C3AA2 /* Customer */,
 			);
 			name = Model;
 			path = ..;
@@ -171,10 +231,8 @@
 		46E427361E6B75A40095AB1C /* View */ = {
 			isa = PBXGroup;
 			children = (
-				46E427411E6BA6E80095AB1C /* RestaurantViewCell.swift */,
-				467007731E6CC3BD000C3AA2 /* MealViewCell.swift */,
-				467007791E6D0F33000C3AA2 /* TrayViewCell.swift */,
-				4670077D1E6DEBF6000C3AA2 /* OrderViewCell.swift */,
+				467007841E6E3D89000C3AA2 /* Driver */,
+				467007831E6E3D84000C3AA2 /* Customer */,
 			);
 			name = View;
 			path = ..;
@@ -183,15 +241,8 @@
 		46E427371E6B75AD0095AB1C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				46E4272D1E6B5C2B0095AB1C /* LoginViewController.swift */,
-				4664E2271E6907B700811D66 /* RestaurantViewController.swift */,
-				4664E2291E69164B00811D66 /* CustomerMenuTableViewController.swift */,
-				4664E22B1E69208200811D66 /* MealListTableViewController.swift */,
-				4664E22D1E6931AD00811D66 /* MealDetailsViewController.swift */,
-				4664E22F1E693F4700811D66 /* TrayViewController.swift */,
-				46274C7D1E69D77E0062FBCB /* PaymentViewController.swift */,
-				46274C7F1E69DD480062FBCB /* OrderViewController.swift */,
-				4670077F1E6E3AF4000C3AA2 /* DriverOrderViewController.swift */,
+				467007861E6E3DA0000C3AA2 /* Driver */,
+				467007851E6E3D95000C3AA2 /* Customer */,
 			);
 			name = Controller;
 			path = ..;
@@ -348,6 +399,7 @@
 				467007721E6CC287000C3AA2 /* Meal.swift in Sources */,
 				46E4273C1E6B82E50095AB1C /* Constants.swift in Sources */,
 				46274C801E69DD480062FBCB /* OrderViewController.swift in Sources */,
+				467007881E6E3E1F000C3AA2 /* DriverMenuViewController.swift in Sources */,
 				46E4273E1E6BA0280095AB1C /* Restaurant.swift in Sources */,
 				467007781E6CFFC0000C3AA2 /* TrayItem.swift in Sources */,
 				4664E22E1E6931AD00811D66 /* MealDetailsViewController.swift in Sources */,

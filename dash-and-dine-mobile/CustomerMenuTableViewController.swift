@@ -17,6 +17,7 @@ class CustomerMenuTableViewController: UITableViewController {
         super.viewDidLoad()
 
         lbName.text = User.currentUser.name
+        
         imgAvatar.image = try! UIImage(data: Data(contentsOf: URL(string: User.currentUser.pictureURL!)!))
         imgAvatar.layer.cornerRadius = 70 / 2
         imgAvatar.layer.borderWidth = 1.0
