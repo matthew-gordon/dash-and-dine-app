@@ -21,6 +21,8 @@ class APIManager {
     var refreshToken = ""
     var expired = Date()
     
+    /****** CUSTOMERS *****/
+    
     // API to login an user
     func login(userType: String, completionHandler: @escaping (NSError?) -> Void) {
         
@@ -138,7 +140,7 @@ class APIManager {
         
     }
     
-    // API - Getting Restaurants list
+    // API - GET all Restaurants list
     func getAllRestaurants(completionHandler: @escaping (JSON) -> Void) {
         
         let path = "api/customer/restaurants/"
@@ -146,14 +148,14 @@ class APIManager {
         
     }
     
-    // API - Getting list of Meals of a Restaurant.
+    // API - GET list of Meals of a Restaurant.
     func getAllMeals(restaurantId: Int, completionHandler: @escaping (JSON) -> Void) {
         
         let path = "api/customer/meals/\(restaurantId)"
         requestServer(.get, path, nil, URLEncoding(), completionHandler)
     }
     
-    // API - Creating new order
+    // API - POST new order
     func createOrder(stripeToken: String, completionHandler: @escaping (JSON) -> Void) {
         
         let path = "api/customer/order/add/"
@@ -189,7 +191,7 @@ class APIManager {
         }
     }
     
-    // API - Getting the latest order (Customer)
+    // API - GET the latest order (Customer)
     func getLatestOrder(completionHandler: @escaping (JSON) -> Void) {
         
         let path = "api/customer/order/latest/"
@@ -198,5 +200,14 @@ class APIManager {
         ]
         
         requestServer(.get, path, params, URLEncoding(), completionHandler)
+    }
+    
+    /****** DRIVERS *****/
+    
+    // API - GET all ready Orders
+    func getDriverOrders(completionHandler: @escaping (JSON) -> Void) {
+        let path = "api/driver/orders/ready/"
+        
+        requestServer(.get, path, nil, URLEncoding(), completionHandler)
     }
 }
