@@ -220,7 +220,13 @@
                         <barButtonItem key="leftBarButtonItem" image="menu-1" id="Kpe-zs-YvB"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="bComplete" destination="VxT-FL-Clp" id="dxB-by-Rw8"/>
+                        <outlet property="imgCustomerAvatar" destination="4KB-RV-lUI" id="0er-sa-S2k"/>
+                        <outlet property="lbCustomerAddress" destination="uUY-8I-BgF" id="BxP-jD-hfJ"/>
+                        <outlet property="lbCustomerName" destination="Cgi-Is-OuW" id="gQw-BA-T2y"/>
+                        <outlet property="map" destination="KeM-Ew-kM3" id="uDF-Yf-BmD"/>
                         <outlet property="menuBarButton" destination="Kpe-zs-YvB" id="AQo-BO-ij9"/>
+                        <outlet property="viewInfo" destination="cRQ-Bb-NRJ" id="OR8-kp-GlS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2LR-NW-Kwu" userLabel="First Responder" sceneMemberID="firstResponder"/>

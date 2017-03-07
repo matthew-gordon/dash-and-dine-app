@@ -221,4 +221,14 @@ class APIManager {
         requestServer(.post, path, params, URLEncoding(), completionHandler)
         
     }
+    
+    //API - GET current driver's order
+    func getCurrentDriverOrder(completionHandler: @escaping (JSON) -> Void) {
+        let path = "api/driver/order/latest/"
+        let params: [String: Any] = [
+            "access_token": self.accessToken
+        ]
+        requestServer(.get, path, params, URLEncoding(), completionHandler)
+    }
+    
 }
