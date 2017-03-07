@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B18ECF109A27AF30DF2B5EEE65241DBC"
+               BlueprintIdentifier = "A61A99730E6ED07534E2269CE1876F2B"
                BuildableName = "Pods_dash_and_dine_mobile.framework"
                BlueprintName = "Pods-dash-and-dine-mobile"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B18ECF109A27AF30DF2B5EEE65241DBC"
+            BlueprintIdentifier = "A61A99730E6ED07534E2269CE1876F2B"
             BuildableName = "Pods_dash_and_dine_mobile.framework"
             BlueprintName = "Pods-dash-and-dine-mobile"
             ReferencedContainer = "container:Pods.xcodeproj">

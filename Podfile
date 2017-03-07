@@ -12,7 +12,6 @@ target 'dash-and-dine-mobile' do
   pod 'FBSDKShareKit'
   pod 'Alamofire'
   pod 'SwiftyJSON'
-
-
+  pod 'Charts'
 
 end

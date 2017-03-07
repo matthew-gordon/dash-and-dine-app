@@ -17,6 +17,8 @@ class OrderViewController: UIViewController {
     @IBOutlet weak var map: MKMapView!
     @IBOutlet weak var lbStatus: UILabel!
     
+    let activityIndicator = UIActivityIndicatorView()
+    
     var tray = [JSON]()
     
     var destination: MKPlacemark?
@@ -40,6 +42,8 @@ class OrderViewController: UIViewController {
     
     func getLatestOrder() {
         
+        Helpers.showActivityIndicator(activityIndicator, self.view)
+        
         APIManager.shared.getLatestOrder { (json) in
             
             print(json)
@@ -49,7 +53,6 @@ class OrderViewController: UIViewController {
             if order["status"] != nil {
             
                 if let orderDetails = order["order_details"].array {
-                    
                     self.lbStatus.text = order["status"].string!.uppercased()
                     self.tray = orderDetails
                     self.tbvMeals.reloadData()
@@ -70,7 +73,22 @@ class OrderViewController: UIViewController {
                 if order["status"] != "Delivered" {
                     self.setTimer()
                 }
-            } // else display label showing that user doesn't have any order, hide UI controlsq
+            } else {
+            
+                self.map.isHidden = true
+                self.lbStatus.isHidden = true
+                self.tbvMeals.isHidden = true
+                
+                // Show message here
+                
+                let lbMessage = UILabel(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 40))
+                lbMessage.center = self.view.center
+                lbMessage.textAlignment = NSTextAlignment.center
+                lbMessage.text = "You don't have any orders."
+                
+                self.view.addSubview(lbMessage)
+                Helpers.hideActivityIndicator(self.activityIndicator)
+            }// else display label showing that user doesn't have any order, hide UI controlsq
         }
     }
     

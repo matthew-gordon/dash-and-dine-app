@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Charts.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>FBSDKCoreKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -52,7 +57,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>39757D6541291E2AA0D970BBF750CFE3</key>
+		<key>1486CC5D1628834041C5FDBFF2A5FC17</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -62,17 +67,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>54912A3685F158CC3E6542997C1039AB</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B18ECF109A27AF30DF2B5EEE65241DBC</key>
+		<key>A61A99730E6ED07534E2269CE1876F2B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -87,12 +87,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>D8F567EA0E32FA6C88039ECC6606D1C6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>E396A93E4C79B22B7816E9F02F62ECED</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>FE4DE9B5B22644DC1B1D5DA3CE3F91D6</key>
+		<key>F307B842FF76B2DE6C55DB67C0885325</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F3BFCAA4FD4F6D2EFD4D08BFEC1A5BD6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
