@@ -126,6 +126,33 @@ class DeliveryViewController: UIViewController {
             }
         }
     }
+    
+    
+    @IBAction func completeOrder(_ sender: Any) {
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        let okAction = UIAlertAction(title: "OK", style: .default) { (action) in
+            
+            APIManager.shared.completeOrder(orderId: self.orderId!, completionHandler: { (json) in
+                
+                if json != nil {
+                
+                    // Stop updating driver location
+                    self.timer.invalidate()
+                    self.locationManager.stopUpdatingLocation()
+                    
+                    // Redirect driver to view orders
+                    self.performSegue(withIdentifier: "ViewOrders", sender: self)
+                }
+            })
+        }
+        
+        let alertView = UIAlertController(title: "Complete Order?", message: "Are you sure you are ready to complete this order?", preferredStyle: .alert)
+        alertView.addAction(cancelAction)
+        alertView.addAction(okAction)
+        
+        self.present(alertView, animated: true, completion: nil)
+    }
 }
 
 extension DeliveryViewController: MKMapViewDelegate {

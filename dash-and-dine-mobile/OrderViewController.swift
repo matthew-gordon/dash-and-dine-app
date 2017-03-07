@@ -110,6 +110,10 @@ class OrderViewController: UIViewController {
                 
                 // Reset zoom Rect to cover all 3 locations
                 self.autoZoom()
+                
+            } else {
+            
+                self.timer.invalidate()
             }
         }
     }

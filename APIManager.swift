@@ -233,7 +233,7 @@ class APIManager {
         
     }
     
-    //API - GET current driver's order
+    // API - GET current driver's order
     func getCurrentDriverOrder(completionHandler: @escaping (JSON) -> Void) {
         let path = "api/driver/order/latest/"
         let params: [String: Any] = [
@@ -242,12 +242,22 @@ class APIManager {
         requestServer(.get, path, params, URLEncoding(), completionHandler)
     }
     
-    //API - POST update driver's location
+    // API - POST update driver's location
     func updateLocation(location: CLLocationCoordinate2D, completionHandler: @escaping (JSON) -> Void) {
         let path = "api/driver/location/update/"
         let params: [String: Any] = [
             "access_token": self.accessToken,
             "location": "\(location.latitude),\(location.longitude)"
+        ]
+        requestServer(.post, path, params, URLEncoding(), completionHandler)
+    }
+    
+    // API - POST complete order
+    func completeOrder(orderId: Int, completionHandler: @escaping (JSON) -> Void) {
+        let path = "api/driver/order/complete/"
+        let params: [String: Any] = [
+            "order_id": "\(orderId)",
+            "access_token": self.accessToken
         ]
         requestServer(.post, path, params, URLEncoding(), completionHandler)
     }
