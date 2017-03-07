@@ -203,6 +203,16 @@ class APIManager {
         requestServer(.get, path, params, URLEncoding(), completionHandler)
     }
     
+    // API - GET the driver's location
+    func getDriverLocation(completionHandler: @escaping (JSON) -> Void) {
+        let path = "api/customer/driver/location/"
+        let params: [String: Any] = [
+            "access_token": self.accessToken
+        ]
+        requestServer(.get, path, params, URLEncoding(), completionHandler)
+        
+    }
+    
     /****** DRIVERS *****/
     
     // API - GET all ready Orders
