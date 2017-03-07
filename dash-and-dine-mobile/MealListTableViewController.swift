@@ -47,7 +47,7 @@ class MealListTableViewController: UITableViewController {
                         }
                         
                         self.tableView.reloadData()
-                        Helpers.hideActivityIndicator(self.activityIndicator, self.view)
+                        Helpers.hideActivityIndicator(self.activityIndicator)
                     }
                 }
             })
