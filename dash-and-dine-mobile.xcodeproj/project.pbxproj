@@ -25,6 +25,7 @@
 		4670077E1E6DEBF6000C3AA2 /* OrderViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4670077D1E6DEBF6000C3AA2 /* OrderViewCell.swift */; };
 		467007801E6E3AF4000C3AA2 /* DriverOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4670077F1E6E3AF4000C3AA2 /* DriverOrderViewController.swift */; };
 		467007881E6E3E1F000C3AA2 /* DriverMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467007871E6E3E1F000C3AA2 /* DriverMenuViewController.swift */; };
+		4670078A1E6E573D000C3AA2 /* DeliveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467007891E6E573D000C3AA2 /* DeliveryViewController.swift */; };
 		46865AA81E68C131003FCF97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46865AA71E68C131003FCF97 /* AppDelegate.swift */; };
 		46865AAD1E68C131003FCF97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46865AAB1E68C131003FCF97 /* Main.storyboard */; };
 		46865AAF1E68C131003FCF97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46865AAE1E68C131003FCF97 /* Assets.xcassets */; };
@@ -61,6 +62,7 @@
 		4670077D1E6DEBF6000C3AA2 /* OrderViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderViewCell.swift; sourceTree = "<group>"; };
 		4670077F1E6E3AF4000C3AA2 /* DriverOrderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriverOrderViewController.swift; sourceTree = "<group>"; };
 		467007871E6E3E1F000C3AA2 /* DriverMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DriverMenuViewController.swift; sourceTree = "<group>"; };
+		467007891E6E573D000C3AA2 /* DeliveryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeliveryViewController.swift; sourceTree = "<group>"; };
 		46865AA41E68C131003FCF97 /* dash-and-dine-mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "dash-and-dine-mobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		46865AA71E68C131003FCF97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		46865AAC1E68C131003FCF97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 			children = (
 				4670077F1E6E3AF4000C3AA2 /* DriverOrderViewController.swift */,
 				467007871E6E3E1F000C3AA2 /* DriverMenuViewController.swift */,
+				467007891E6E573D000C3AA2 /* DeliveryViewController.swift */,
 			);
 			name = Driver;
 			sourceTree = "<group>";
@@ -412,6 +415,7 @@
 				467007741E6CC3BD000C3AA2 /* MealViewCell.swift in Sources */,
 				4664E22A1E69164B00811D66 /* CustomerMenuTableViewController.swift in Sources */,
 				46E4273A1E6B77FD0095AB1C /* APIManager.swift in Sources */,
+				4670078A1E6E573D000C3AA2 /* DeliveryViewController.swift in Sources */,
 				46274C7E1E69D77E0062FBCB /* PaymentViewController.swift in Sources */,
 				4664E2231E68EF8600811D66 /* SWRevealViewController.m in Sources */,
 			);
