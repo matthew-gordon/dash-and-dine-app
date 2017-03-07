@@ -210,4 +210,15 @@ class APIManager {
         
         requestServer(.get, path, nil, URLEncoding(), completionHandler)
     }
+    
+    // API - POST pick up ready order
+    func pickUpOrder(orderId: Int, completionHandler: @escaping (JSON) -> Void) {
+    let path = "api/driver/order/pick_up/"
+        let params: [String: Any] = [
+            "order_id": "\(orderId)",
+            "access_token": self.accessToken
+        ]
+        requestServer(.post, path, params, URLEncoding(), completionHandler)
+        
+    }
 }

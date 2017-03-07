@@ -132,6 +132,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="menuBarButton" destination="t0B-uu-uvL" id="EWz-F9-Co4"/>
+                        <segue destination="6GI-Ec-r8p" kind="show" identifier="CurrentDelivery" id="hkb-Ze-sl0"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vTl-rD-DXQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -318,7 +319,7 @@
                                             <action selector="facebookLogout:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BEt-Yg-DYQ"/>
                                         </connections>
                                     </button>
-                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="hbU-ud-uyP">
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="hbU-ud-uyP">
                                         <rect key="frame" x="10" y="546" width="394" height="51"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -1618,7 +1619,8 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="heg-iT-h1R"/>
-        <segue reference="JDN-6m-o9E"/>
+        <segue reference="g3e-FX-CV9"/>
+        <segue reference="hkb-Ze-sl0"/>
         <segue reference="fMd-3L-Zxv"/>
         <segue reference="quM-cf-B9K"/>
         <segue reference="lEi-pm-9Q5"/>

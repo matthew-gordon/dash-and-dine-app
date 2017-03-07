@@ -71,7 +71,6 @@ class DriverOrderViewController: UITableViewController {
         let order = orders[indexPath.row]
         cell.lbRestaurantName.text = order.restaurantName
         cell.lbCustomerName.text = order.customerName
-        print(order.customerAddress)
         cell.lbCustomerAddress.text = order.customerAddress
         
         cell.imgCustomerAvatar.image = try! UIImage(data: Data(contentsOf: URL(string: order.customerAvatar!)!))
@@ -79,6 +78,45 @@ class DriverOrderViewController: UITableViewController {
         cell.imgCustomerAvatar.clipsToBounds = true
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let order = orders[indexPath.row]
+        self.pickUpOrder(orderId: order.id!)
+    }
+    
+    private func pickUpOrder(orderId: Int) {
+    
+        APIManager.shared.pickUpOrder(orderId: orderId) { (json) in
+            print(json["status"].string)
+            if let status = json["status"].string {
+                
+                switch status {
+                
+                    case "failed":
+                    // Show an alert saying Error
+                    let alertView = UIAlertController(title: "Error", message: json["error"].string, preferredStyle: .alert)
+                    
+                    let cancelAction = UIAlertAction(title: "OK", style: .cancel)
+                    
+                    alertView.addAction(cancelAction)
+                    self.present(alertView, animated: true, completion: nil)
+                    
+                default:
+                    // Show an alert saying Success
+                    let alertView = UIAlertController(title: nil, message: "Success!", preferredStyle: .alert)
+                    
+                   let okAction = UIAlertAction(title: "Show my map", style: .default, handler: { (action) in
+                    
+                    self.performSegue(withIdentifier: "CurrentDelivery", sender: self)
+                   })
+                    
+                    alertView.addAction(okAction)
+                    self.present(alertView, animated: true, completion: nil)
+                    
+                }
+            }
+        }
     }
 
 }
